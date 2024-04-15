@@ -1,0 +1,10 @@
+def sum_from_string(list_str):
+    numbers = []
+    for char in list_str:
+        if char.isdigit():
+            numbers.append(int(char))
+        elif char == '-':
+            numbers.append(int(char + next(list_str)))
+    return sum(numbers)
+
+list_ = [[[ [1, 4, 5], [[6, 9],[[[8, 1], 7], 3], 2], 7], 5, 2], 9, [1, 2]]
